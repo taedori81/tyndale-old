@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load mezzanine_tags keyword_tags %}
+{% load mezzanine_tags keyword_tags pages_tags %}
 
 {% block meta_title %}{{ page.meta_title }}{% endblock %}
 
@@ -19,5 +19,18 @@
 {% editable page.title %}{{ page.title }}{% endeditable %}
 {% endblock %}
 
+{% block breadcrumb_section %}
+<div class="row breadcrumb-wrapper">
+        <div class="col-sm-12">
+            <div class="container">
+                <ul class="breadcrumb">
+                {% spaceless %}
+                {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+                {% endspaceless %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 {% block main %}
 {% endblock %}

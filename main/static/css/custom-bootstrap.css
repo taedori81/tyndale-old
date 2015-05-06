@@ -4983,7 +4983,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /* line 11, less/navbar.less */
 .navbar {
   position: relative;
-  min-height: 120px;
+  min-height: 80px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -5108,10 +5108,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 /* line 163, less/navbar.less */
 .navbar-brand {
   float: left;
-  padding: 50px 15px;
+  padding: 30px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 120px;
+  height: 80px;
 }
 /* line 170, less/navbar.less */
 .navbar-brand:hover,
@@ -5135,8 +5135,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 43px;
-  margin-bottom: 43px;
+  margin-top: 23px;
+  margin-bottom: 23px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -5165,7 +5165,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 /* line 232, less/navbar.less */
 .navbar-nav {
-  margin: 25px -15px;
+  margin: 15px -15px;
 }
 /* line 235, less/navbar.less */
 .navbar-nav > li > a {
@@ -5211,8 +5211,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   /* line 272, less/navbar.less */
   .navbar-nav > li > a {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 /* line 286, less/navbar.less */
@@ -5224,8 +5224,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 43px;
-  margin-bottom: 43px;
+  margin-top: 23px;
+  margin-bottom: 23px;
 }
 @media (min-width: 768px) {
   /* line 442, less/forms.less */
@@ -5327,23 +5327,23 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 /* line 343, less/navbar.less */
 .navbar-btn {
-  margin-top: 43px;
-  margin-bottom: 43px;
+  margin-top: 23px;
+  margin-bottom: 23px;
 }
 /* line 346, less/navbar.less */
 .navbar-btn.btn-sm {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 /* line 349, less/navbar.less */
 .navbar-btn.btn-xs {
-  margin-top: 49px;
-  margin-bottom: 49px;
+  margin-top: 29px;
+  margin-bottom: 29px;
 }
 /* line 359, less/navbar.less */
 .navbar-text {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 @media (min-width: 768px) {
   /* line 362, less/navbar.less */
@@ -7967,10 +7967,14 @@ button.close {
 /*-------------------------------------------*/
 /*---------- Basic  -------------------------*/
 /*-------------------------------------------*/
+/* line 10, custom-others.less */
+.main-body {
+  padding-top: 40px;
+}
 /*-------------------------------------------*/
 /*----------Nav bar -------------------------*/
 /*-------------------------------------------*/
-/* line 13, custom-others.less */
+/* line 17, custom-others.less */
 .navbar-brand {
   float: left;
   font-size: 18px;
@@ -7978,21 +7982,56 @@ button.close {
   line-height: 20px;
   padding: 20px 15px;
 }
-/* line 25, custom-others.less */
+/* line 29, custom-others.less */
 .main-logo {
-  padding-top: 20px;
+  padding-top: 5px;
 }
-/* line 28, custom-others.less */
+/* line 32, custom-others.less */
 .main-logo img {
-  max-height: 120px;
-  max-width: 120px;
+  max-height: 80px;
+  max-width: 80px;
 }
-/* line 33, custom-others.less */
+/* line 37, custom-others.less */
 .main-logo p {
-  padding-top: 40px;
+  padding-top: 23px;
   padding-left: 10px;
   font-family: 'Lobster', cursive;
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 24px;
+}
+/*-------------------------------------------*/
+/*--------------Breadcrumb-------------------*/
+/*-------------------------------------------*/
+/* line 50, custom-others.less */
+.breadcrumb-wrapper {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background: rgba(0, 65, 162, 0.6);
+}
+/* line 57, custom-others.less */
+.breadcrumb {
+  list-style: none;
+  background-color: inherit;
+  color: #ffffff;
+  padding-top: 20px;
+}
+/* line 65, custom-others.less */
+.breadcrumb > li {
+  display: inline-block;
+  padding-top: 20px;
+  font-size: 20px;
+}
+/* line 69, custom-others.less */
+.breadcrumb > li > a {
+  color: #c9302c;
+}
+/* line 74, custom-others.less */
+.breadcrumb > .active {
+  color: #ffffff;
+}
+/* line 79, custom-others.less */
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #ffffff;
 }
 /*# sourceMappingURL=custom-bootstrap.css.map */

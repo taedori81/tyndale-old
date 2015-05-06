@@ -6,6 +6,10 @@
 body {
 
 }
+
+.main-body {
+  padding-top: 40px;
+}
 /*-------------------------------------------*/
 /*----------Nav bar -------------------------*/
 /*-------------------------------------------*/
@@ -23,19 +27,59 @@ body {
 }
 
 .main-logo {
-  padding-top: 20px;
+  padding-top: 5px;
 
   img{
-     max-height: 120px;
-     max-width:  120px;
+     max-height: 80px;
+     max-width:  80px;
   }
 
   p {
-    padding-top: 40px;
+    padding-top: 23px;
     padding-left: 10px;
     font-family: 'Lobster', cursive;
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 24px;
   }
 }
+
+
+/*-------------------------------------------*/
+/*--------------Breadcrumb-------------------*/
+/*-------------------------------------------*/
+
+.breadcrumb-wrapper {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background: rgba(0, 65, 162, 0.60);
+
+}
+
+.breadcrumb {
+  list-style: none;
+  background-color: inherit;
+  color: #ffffff;
+  padding-top: 20px;
+
+
+
+  > li {
+    display: inline-block;
+    padding-top: 20px;
+    font-size: 20px;
+  > a {
+    color: #c9302c;
+  }
+  }
+
+  > .active {
+     color: #ffffff;
+  }
+}
+
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #ffffff;
+}
+
 

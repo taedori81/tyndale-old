@@ -15,15 +15,16 @@
 <link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
 {% endifinstalled %}
 
-{% compress css %}
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+{% compress css %}
+
 <link rel="stylesheet" href="{% static "css/custom-bootstrap.css" %}">
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
 
 {% endcompress %}
 
 {% compress js %}
-<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
+<script src="{% static "js/jquery.js" %}"></script>
 <script src="{% static "js/bootstrap.js" %}"></script>
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
 {% block extra_js %}{% endblock %}
@@ -37,8 +38,11 @@
 {% block extra_head %}{% endblock %}
 </head>
 
+
+<!-- Body Start -->
 <body id="{% block body_id %}body{% endblock %}">
 
+<!-- Nav bar Start -->
 <div class="container">
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -53,7 +57,7 @@
                         </button>
                         <div class="row main-logo">
                                 <div class="col-sm-3">
-                                    <img class="img-responsive" src="../static/images/logo.jpg" alt=""/>
+                                    <img class="img-responsive" src="{% static "images/logo.jpg" %}" alt="TIU Logo"/>
                                 </div>
                                 <div class="col-sm-9">
                                     <p>Tyndale Internation University</p>
@@ -67,66 +71,61 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
-
 </div>
+<!-- Nav bar ends -->
+
+<!-- Breadcrumb Start -->
+
+{% block breadcrumb_section %} {% endblock %}
+
+<!-- Breadcrumb ends -->
+
+<div class="container {% block top_padding %}{% endblock %}">
+
+    <div class="row">
+
+        <!-- Left Side Panel - Hidden by default -->
+        <div class="{% block main-left-col %}{% endblock %} left">
+            {% block left_panel %}
+            {% endblock %}
+        </div>
+
+        <!-- Main Center Panel -->
+        <div class="{% block main-middle-col %}col-sm-12{% endblock %} middle">
+            {% block main %}{% endblock %}
+        </div>
 
 
+        <!-- Right Side Panel - Hidden by default -->
+        <div class="{% block main-right-col %}{% endblock %} right">
+            {% block right_panel %}
+            {% endblock %}
+        </div>
 
-<div class="container">
-<div class="row">
-
-<div class="col-md-2 left">
-    {% block left_panel %}
-    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
-    {% endblock %}
-</div>
-
-<div class="col-md-7 middle">
-    {% block main %}{% endblock %}
-</div>
-
-<div class="col-md-3 right">
-    {% nevercache %}
-    {% include "includes/user_panel.html" %}
-    {% endnevercache %}
-    <div class="panel panel-default">
-    <div class="panel-body">
-    {% block right_panel %}
-    {% ifinstalled mezzanine.twitter %}
-    {% include "twitter/tweets.html" %}
-    {% endifinstalled %}
-    {% endblock %}
     </div>
-    </div>
-</div>
-
-</div>
 </div>
 
 <footer>
-<div class="container">
-{% page_menu "pages/menus/footer.html" %}
+    <div class="container">
 
-<div class="row">
-<p class="site-info text-center">
-    {% trans "Powered by" %}
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-    <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
-    {% trans "and" %}
-    <a href="http://www.djangoproject.com">Django</a>
-    <span class="separator">|</span>
-    {% trans "Theme by" %} <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
-    {% ifinstalled mezzanine.mobile %}
-    <span class="separator">|</span>
-    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-    {% endifinstalled %}
-</p>
-</div>
-</div>
+        <div class="row">
+            <p class="site-info text-center">
+                {% trans "Powered by" %}
+                <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
+                <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
+                {% trans "and" %}
+                <a href="http://www.djangoproject.com">Django</a>
+                <span class="separator">|</span>
+                {% trans "Theme by" %} <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
+                {% ifinstalled mezzanine.mobile %}
+                <span class="separator">|</span>
+                <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
+                {% endifinstalled %}
+            </p>
+        </div>
+    </div>
 </footer>
 
 {% include "includes/footer_scripts.html" %}
