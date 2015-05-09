@@ -4,82 +4,240 @@
 /*---------- Basic  -------------------------*/
 /*-------------------------------------------*/
 body {
-
+  font-family: 'Quicksand', sans-serif;
 }
 
 .main-body {
-  padding-top: 40px;
+  margin-top: 70px;
 }
+
+
+/*-------------------------------------------*/
+/*---------- Brand/project name--------------*/
+/*-------------------------------------------*/
+.navbar-brand {
+  padding: @navbar-padding-vertical @navbar-padding-horizontal;
+  font-size: @font-size-large;
+  line-height: @line-height-computed;
+  height: @navbar-height;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-height: 90px;
+    max-width:  90px;
+    margin-top: -30px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    .navbar > .container &,
+    .navbar > .container-fluid & {
+      margin-left: -@navbar-padding-horizontal;
+    }
+  }
+}
+
+
+/*-------------------------------------------*/
+/*--------------Subtitle---------------------*/
+/*-------------------------------------------*/
+
+.subtitle-panel {
+  margin-top: 70px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background: rgba(0, 65, 162, 0.60);
+
+  p {
+    font-size: 24px;
+    color: #ffffff;
+  }
+
+}
+
+/*-------------------------------------------*/
+/*------------Side Menu----------------------*/
+/*-------------------------------------------*/
+
+#side-menu {
+  margin-top: 30px;
+  font-size: 14px;
+  font-family: 'Slabo 27px', serif;;
+}
+
+
+
 /*-------------------------------------------*/
 /*----------Nav bar -------------------------*/
 /*-------------------------------------------*/
+.navbar {
+  font-family: 'Quicksand', sans-serif;
+  color: rgba(1, 1, 1, 0.89);
+  font-size: 14px;
+}
 
 .navbar-brand {
   float: left;
   font-size: 18px;
+  font-weight: 700;
   height: 50px;
   line-height: 20px;
-  padding: 20px 15px;
+  padding: 45px 0px;
 
   img {
 
   }
 }
 
-.main-logo {
-  padding-top: 5px;
 
-  img{
-     max-height: 80px;
-     max-width:  80px;
+.ddm() when (@dropDown) {
+  > .dropdown-menu {
+    background-color: @bgDefault;
+    > li > a {
+      color: @colDefault;
+      &:hover,  &:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight;
+      }
+    }
+    .divider {
+      background-color: @bgHighlight;
+    }
   }
+}
+.navbar-default {
+  background-color: @bgDefault;
+  border-color: @bgHighlight;
+  background-image: url("../images/concrete_seamless.png");
+  .navbar-brand {
+    color: @colDefault;
+    &:hover, &:focus {
+      color: @colHighlight;
+    }
+  }
+  .navbar-text {
+    color: @colDefault;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        color: @colDefault;
+        &:hover,  &:focus {
+          color: @colHighlight;
+          border-bottom: 2px solid @colHighlight;
+        }
+      }
+      .ddm
+    }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight;
+      }
+    }
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight;
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: @bgHighlight;
+    &:hover, &:focus {
+      background-color: @bgHighlight;
+    }
+    .icon-bar {
+      background-color: @colDefault;
+    }
+  }
+  .navbar-collapse,
+  .navbar-form {
+    border-color: @colDefault;
+  }
+  .navbar-link {
+    color: @colDefault;
+    &:hover {
+      color: @colHighlight;
+    }
+  }
+}
 
-  p {
-    padding-top: 23px;
-    padding-left: 10px;
-    font-family: 'Lobster', cursive;
-    font-size: 24px;
+.navbar-collapse {
+  padding-top: 70px;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: @colDefault;
+      &:hover, &:focus {
+        color: @colHighlight;
+      }
+    }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: @colHighlight;
+        background-color: @bgHighlight;
+      }
+    }
   }
 }
 
 
+
+
 /*-------------------------------------------*/
-/*--------------Breadcrumb-------------------*/
+/*--------------About------------------------*/
 /*-------------------------------------------*/
 
-.breadcrumb-wrapper {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  background: rgba(0, 65, 162, 0.60);
+#about-section {
+  margin-top: 30px;
 
-}
-
-.breadcrumb {
-  list-style: none;
-  background-color: inherit;
-  color: #ffffff;
-  padding-top: 20px;
-
-
-
-  > li {
-    display: inline-block;
-    padding-top: 20px;
+  .panel-title {
     font-size: 20px;
-  > a {
-    color: #c9302c;
-  }
+    font-family: 'Slabo 27px', serif;
+    padding: 10px 5px ;
+    text-align: center;
   }
 
-  > .active {
-     color: #ffffff;
+  .panel-body {
+    font-size: 13px;
+  }
+
+
+  .name {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+
+  }
+
+  .title {
+    font-family: 'Slabo 27px', serif;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
   }
 }
 
-.breadcrumb > li + li:before {
-  content: "/\00a0";
-  padding: 0 5px;
-  color: #ffffff;
-}
+
+
+
+
+
+
+
+
+
+
 
 
