@@ -1,16 +1,11 @@
-//$(function(){
-//    $('#map').gMap({
-//        address: "",
-//	    zoom: 18,
-//	    markers:[
-//		{
-//			latitude: 34.0492440,
-//			longitude: -118.2735170,
-//			html: "Tyndale International University",
-//            popup: true,
-//		},
-//
-//	]
-//    });
-//});
-//
+$(function() {
+   $('#side-menu').sticky({topSpacing: 60});
+
+    $(window).scroll(function(){
+        if($(document).scrollTop() > 50) {
+            $('nav').addClass('shrink');
+        } else {
+            $('nav').removeClass('shrink');
+        }
+    });
+});

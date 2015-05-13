@@ -16,10 +16,18 @@
 {% endifinstalled %}
 
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Poiret+One|Inconsolata|Josefin+Sans|Quicksand|Josefin+Slab' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+
+
 {% compress css %}
 
-<link rel="stylesheet" href="{% static "css/custom-bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
+{#    <link rel="stylesheet" href= {% static "css/bootflat.css" %}/>#}
+<link rel="stylesheet" href="{% static "css/custom-bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
 
 {% endcompress %}
 
@@ -44,10 +52,10 @@
 
 <!-- Nav bar Start -->
 <div class="container">
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav id="top_navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                         <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="sr-only">{% trans "Toggle Navigation" %}</span>
@@ -55,30 +63,30 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <div class="row main-logo">
-                                <div class="col-sm-3">
-                                    <img class="img-responsive" src="{% static "images/logo.jpg" %}" alt="TIU Logo"/>
+                        <div class="row navbar-brand">
+                                <div class="col-sm-12">
+                                    <img class="img-responsive" src="{% static "images/Main_logo.png" %}" alt="TIU Logo"/>
                                 </div>
-                                <div class="col-sm-9">
-                                    <p>Tyndale Internation University</p>
-                                </div>
+{#                                <div class="col-sm-9">#}
+{#                                    <p>Tyndale International University</p>#}
+{#                                </div>#}
                         </div>
                      </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-8">
                      <div class="navbar-collapse collapse navbar-right">
                         {% page_menu "pages/menus/dropdown.html" %}
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 </div>
 <!-- Nav bar ends -->
 
 <!-- Breadcrumb Start -->
 
-{% block breadcrumb_section %} {% endblock %}
+{% block subtitle_section %} {% endblock %}
 
 <!-- Breadcrumb ends -->
 
@@ -128,6 +136,10 @@
     </div>
 </footer>
 
+
+
+<script src="{% static "js/jquery.sticky.js" %}"></script>
+<script src="{% static "js/custom.js" %}"></script>
 {% include "includes/footer_scripts.html" %}
 
 </body>

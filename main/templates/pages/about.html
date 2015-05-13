@@ -1,0 +1,31 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags staticfiles %}
+
+{% block main %}{{ block.super }}
+
+<section id="about-section">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">About Tyndale International University</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img src="{% static "images/mission-banner.png" %}" alt="About TIU" class="img-responsive img-rounded"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            {% editable page.richtextpage.content %}
+                            {{ page.richtextpage.content|richtext_filters|safe }}
+                            {% endeditable %}
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+</section>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% load i18n future pages_tags %}
+
+<table class="table table-hover">
+	<tbody>
+    {% for page in page_branch %}
+		<tr>
+			<td>
+                <a href="{{ page.get_absolute_url }}">{{ page.title }}</a>
+            </td>
+		</tr>
+    {% endfor %}
+	</tbody>
+</table>

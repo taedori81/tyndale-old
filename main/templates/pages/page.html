@@ -19,18 +19,31 @@
 {% editable page.title %}{{ page.title }}{% endeditable %}
 {% endblock %}
 
-{% block breadcrumb_section %}
-<div class="row breadcrumb-wrapper">
-        <div class="col-sm-12">
+{% block subtitle_section %}
+
+        <div class="row subtitle-panel">
+        <div class="col-sm-10 col-sm-offset-2">
             <div class="container">
-                <ul class="breadcrumb">
-                {% spaceless %}
-                {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
-                {% endspaceless %}
-                </ul>
+                <p>{{ page.title }}
+                <span class="subtitle-desc">{{ page.richtextpage.description }}</span></p>
             </div>
         </div>
     </div>
+
 {% endblock %}
+
+<!-- Left Panel -->
+{% block main-left-col %}col-sm-3{% endblock %}
+{% block left_panel %}
+{#    <div id="side-menu" class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>#}
+    <div id="side-menu" class="panel panel-group">
+    {% page_menu "pages/menus/side-menu.html" %}
+    </div>
+{% endblock %}
+<!-- Left Panel ends -->
+
+{% block main-middle-col %}col-sm-9{% endblock %}
 {% block main %}
 {% endblock %}
+
+

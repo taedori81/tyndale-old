@@ -1,42 +1,35 @@
 /*-------------------------------------------*/
 /*---------- Basic  -------------------------*/
 /*-------------------------------------------*/
-/* line 6, custom-others.less */
 body {
   font-family: 'Quicksand', sans-serif;
 }
-/* line 10, custom-others.less */
 .main-body {
   margin-top: 70px;
 }
 /*-------------------------------------------*/
 /*---------- Brand/project name--------------*/
 /*-------------------------------------------*/
-/* line 18, custom-others.less */
 .navbar-brand {
-  padding: 50px 15px;
+  padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 120px;
+  height: 50px;
 }
-/* line 24, custom-others.less */
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
 }
-/* line 29, custom-others.less */
 .navbar-brand img {
   display: block;
-  max-height: 90px;
-  max-width: 90px;
+  max-height: 100%;
+  max-width: 100%;
   margin-top: -30px;
 }
-/* line 36, custom-others.less */
 .navbar-brand p {
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 41, custom-others.less */
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
@@ -45,37 +38,71 @@ body {
 /*-------------------------------------------*/
 /*--------------Subtitle---------------------*/
 /*-------------------------------------------*/
-/* line 53, custom-others.less */
 .subtitle-panel {
   margin-top: 70px;
   padding-top: 30px;
   padding-bottom: 20px;
-  background: rgba(0, 65, 162, 0.6);
+  background: url("../images/congruent_outline.png");
 }
-/* line 59, custom-others.less */
 .subtitle-panel p {
   font-size: 24px;
   color: #ffffff;
 }
+.subtitle-panel .subtitle-desc {
+  font-size: 14px;
+  font-style: italic;
+  padding-left: 20px;
+}
 /*-------------------------------------------*/
 /*------------Side Menu----------------------*/
 /*-------------------------------------------*/
-/* line 70, custom-others.less */
 #side-menu {
   margin-top: 30px;
   font-size: 14px;
   font-family: 'Slabo 27px', serif;
 }
+#side-menu .nav > li > a {
+  display: inline-block;
+}
+#side-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 10px;
+}
+#side-menu li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  border-bottom: 1px dotted rgba(52, 109, 196, 0.42);
+  padding-top: 10px;
+}
+#side-menu li:last-child {
+  border: none;
+}
+#side-menu li a {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  width: 200px;
+  -webkit-transition: font-size 0.2s ease, background-color 0.2s, ease;
+  -moz-transition: font-size 0.2s ease, background-color 0.2s, ease;
+  -o-transition: font-size 0.2s ease, background-color 0.2s, ease;
+  transition: font-size 0.2s ease, background-color 0.2s, ease;
+}
+#side-menu li a:hover {
+  font-size: 16px;
+  background: #f9f9f9;
+}
 /*-------------------------------------------*/
 /*----------Nav bar -------------------------*/
 /*-------------------------------------------*/
-/* line 81, custom-others.less */
 .navbar {
   font-family: 'Quicksand', sans-serif;
   color: rgba(1, 1, 1, 0.89);
   font-size: 14px;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
 }
-/* line 87, custom-others.less */
 .navbar-brand {
   float: left;
   font-size: 18px;
@@ -84,90 +111,92 @@ body {
   line-height: 20px;
   padding: 45px 0px;
 }
-/* line 116, custom-others.less */
-.navbar-default {
-  background-color: #ffffff;
-  border-color: transparent;
-  background-image: url("../images/concrete_seamless.png");
+nav .navbar-collapse .navbar .shrink {
+  min-height: 50px;
 }
-/* line 120, custom-others.less */
+.shrink img {
+  -webkit-transition: height 0.6s ease;
+  -moz-transition: height 0.6s ease;
+  -o-transition: height 0.6s ease;
+  transition: height 0.6s ease;
+  height: 50px;
+}
+.shrink .navbar-collapse {
+  -webkit-transition: padding-top 0.6s ease;
+  -moz-transition: padding-top 0.6s ease;
+  -o-transition: padding-top 0.6s ease;
+  transition: padding-top 0.6s ease;
+  padding-top: 20px;
+}
+.shrink .navbar-brand {
+  padding-bottom: 10px;
+}
+.navbar-default {
+  background-color: #f9f9f9;
+  border-color: transparent;
+  border-bottom: 1px solid #eaeaea;
+}
 .navbar-default .navbar-brand {
   color: #262626;
 }
-/* line 122, custom-others.less */
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #346dc4;
 }
-/* line 126, custom-others.less */
 .navbar-default .navbar-text {
   color: #262626;
 }
-/* line 131, custom-others.less */
 .navbar-default .navbar-nav > li > a {
   color: #262626;
 }
-/* line 133, custom-others.less */
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #346dc4;
-  border-bottom: 2px solid #346dc4;
+  border-top: 2px solid #346dc4;
 }
-/* line 141, custom-others.less */
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #346dc4;
   background-color: transparent;
 }
-/* line 147, custom-others.less */
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #346dc4;
   background-color: transparent;
 }
-/* line 153, custom-others.less */
 .navbar-default .navbar-toggle {
   border-color: transparent;
 }
-/* line 155, custom-others.less */
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: transparent;
 }
-/* line 158, custom-others.less */
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #262626;
 }
-/* line 162, custom-others.less */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: #262626;
 }
-/* line 166, custom-others.less */
 .navbar-default .navbar-link {
   color: #262626;
 }
-/* line 168, custom-others.less */
 .navbar-default .navbar-link:hover {
   color: #346dc4;
 }
-/* line 174, custom-others.less */
 .navbar-collapse {
   padding-top: 70px;
 }
 @media (max-width: 767px) {
-  /* line 180, custom-others.less */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #262626;
   }
-  /* line 182, custom-others.less */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
     color: #346dc4;
   }
-  /* line 187, custom-others.less */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
@@ -178,32 +207,85 @@ body {
 /*-------------------------------------------*/
 /*--------------About------------------------*/
 /*-------------------------------------------*/
-/* line 202, custom-others.less */
 #about-section {
   margin-top: 30px;
 }
-/* line 205, custom-others.less */
 #about-section .panel-title {
   font-size: 20px;
   font-family: 'Slabo 27px', serif;
   padding: 10px 5px ;
   text-align: center;
 }
-/* line 212, custom-others.less */
+#about-section .panel-default {
+  border-color: #ffffff;
+}
 #about-section .panel-body {
   font-size: 13px;
 }
-/* line 217, custom-others.less */
 #about-section .name {
   padding-top: 20px;
   text-align: center;
   font-size: 14px;
 }
-/* line 224, custom-others.less */
 #about-section .title {
   font-family: 'Slabo 27px', serif;
   font-style: italic;
   font-size: 14px;
   text-align: center;
 }
-/*# sourceMappingURL=custom-bootstrap.css.map */
+/* Staff */
+.staff-member {
+  position: relative;
+  background: #f9f9f9;
+  margin-bottom: 20px;
+  border: 8px solid #ffffff;
+  -webkit-box-shadow: inset 0 1px #ffffff, 0 0 8px rgba(53, 53, 53, 0.5);
+  -moz-box-shadow: inset 0 1px #ffffff, 0 0 8px rgba(53, 53, 53, 0.5);
+  box-shadow: inset 0 1px #ffffff, 0 0 8px rgba(53, 53, 53, 0.5);
+  text-align: center;
+  margin-top: 3px;
+  font-family: arial, sans-serif;
+  color: inherit;
+  padding: 20px 0;
+}
+.staff-member img {
+  max-width: 50%;
+}
+.staff-member ul {
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 20px;
+  padding: 0px;
+}
+.staff-member ul li {
+  line-height: 28px;
+  font-size: 12px;
+}
+.staff-member-name {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.staff-member-image {
+  text-align: center;
+  position: relative;
+}
+.staff-member-title {
+  font-style: italic;
+  font-size: 14px;
+}
+/*-------------------------------------------*/
+/*--------------Contact----------------------*/
+/*-------------------------------------------*/
+#contact-section {
+  margin-top: 30px;
+}
+#contact-map {
+  margin-top: 70px;
+}
+.contact-info {
+  font-size: 12px;
+}
+.contact-info h4 {
+  font-weight: bold;
+}

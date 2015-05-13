@@ -1,11 +1,102 @@
 {% extends "pages/page.html" %}
 
-{% load mezzanine_tags %}
+{% load mezzanine_tags staticfiles %}
 
 {% block main %}{{ block.super }}
+<section id="about-section">
 
-{% editable page.richtextpage.content %}
-{{ page.richtextpage.content|richtext_filters|safe }}
-{% endeditable %}
-<p>This is about TIU page..</p>
+
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">About Tiu</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                      <img src="{% static "images/Daniel.png"%}" alt="Daniel Ji" class="img-responsive img-rounded"/>
+                      <p class="panel-subtitle">Daniel C. Ji, D.R.E., Th.D.</p>
+                      <p class="panel-subtitle">Chairman</p>
+                     </div>
+                    <div class="col-sm-9">
+                       <p>
+                         Tyndale International University seeks to provide each student with the opportunity to mature in his experiential
+understanding of the substance of Christ's character and image while developing his cognitive and effective
+potential. It is to be a University where understanding and knowledge are generated and disseminated together
+with essential principles of their practical application in a contemporary world for lifelong ministry and the
+development of a foundation for lifelong learning and training.</p>
+<p>Tyndale International University seeks to impart to each student a high level of competency in his ability to study
+and present the Word of God to others. It is our goal to produce individuals who are able to bring enlightened
+solutions to the problems, which are faced by both a church and the secular world.  </p>
+                  </div>
+              </div>
+          </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="panel-group" id="accordian">
+        <div class="panel-default panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a href="#accordianOne" data-toggle="collapse" data-parent="#accordian">
+                        Statement of Faith
+                    </a>
+                </h3>
+            </div>
+            <div class="panel-collapse collapse" id="accordianOne">
+                <div class="panel-body">
+                    <p>
+                        At Tyndale International University, we make a solemn declaration of faith on the basis of the Scriptures as
+follows:
+The Bible is the inerrant and divinely inspired word of God. There is one God, eternally existing and manifesting
+Himself to us in three Persons; the Father, the Son and the Holy Spirit.
+God, by His Word and for His glory, freely created the world in six days from nothing and created man, male and
+female, in His own image, to have fellowship with Him. The existence of the creation is not explainable apart
+from the roles of God as the sovereign Creator and Sustainer of the entire natural realm. Concepts such as theistic
+or threshold evolution do not adequately explain the wonder of God’s creation.
+Tempted by Satan, the whole human race fell in the fall of the first Adam. All men, until they accept the Lord
+Jesus as their personal Savior, are lost, darkened in their understanding, alienated from the life of God through the
+ignorance that is in them, hardened in heart, are are morally and spiritually dead through their trespasses and sins.
+They cannot see, nor enter the kingdom of God until they are born again of the Holy Spirit.</p>
+                    <p>
+  The only Mediator between God and humankind is Jesus Christ our Lord, the eternal Son of God. Jesus Christ
+                        revealed His divine love and upheld divine justice through His death on the cross, in our place, revealing our guilt
+and reconciling us to God. All have sinned through Adam, but the gift of God is eternal life through Jesus Christ
+our Lord. Christ redeemed us from sin through His death on the cross. On the third day He rose bodily from the
+grave, victorious over death and power over darkness. He ascended to heaven where, at God's right hand, He
+intercedes for His people and rules as Lord overall.
+The true Church is composed of all such persons who through saving faith in Jesus Christ have been regenerated
+by the Holy Spirit and are united together in the body of Christ. The Holy Spirit is a Person, and is possessed of all
+the distinctively divine attributes. He is God.
+God's redemptive purpose will be consummated by the return of Christ to raise the dead, to judge all people
+according to the deeds done in the body and to establish His glorious kingdom. All those who receive Jesus Christ
+as their Savior and their Lord, and who confess Him as such, become children of God and receive eternal life, and
+become heirs of God. At death their spirits depart to be with Christ in conscious blessedness, and at the Second
+Coming of Christ their bodies shall be raised and transformed into glorious bodies. They shall live and reign with
+Him forever.
+The wicked shall be separated from God's presence. All those who persistently reject Jesus Christ in the present
+life shall be raised from the dead and throughout eternity exist in the state of conscious, endless torment and
+anguish in hell. Satan, an evil being of cunningness, shall ultimately be cast into the lake of fire and brimstone and
+shall be tormented day and night forever.
+We believe in Westminster Confession of Faith and Heidelberg Catechismas being faithful and truthful to the
+teachings of the Bible, and as best representing the conventional Reformed faith.
+We denunciate liberalism and humanism, however, we believe that the faith rooted and centered on conservative
+faith that is derived from Calvinism’s reformed faith and faith centered on the Bible will revive today’s churches
+and will lead believers to their spiritual growth.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+{#{% editable page.richtextpage.content %}#}
+{#{{ page.richtextpage.content|richtext_filters|safe }}#}
+{#{% endeditable %}#}
+
 {% endblock %}
