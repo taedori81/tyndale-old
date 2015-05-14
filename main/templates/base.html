@@ -24,10 +24,14 @@
 {% compress css %}
 
 <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
-<link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
+{#<link rel="stylesheet" href="{% static "css/mezzanine.css" %}">#}
 {#    <link rel="stylesheet" href= {% static "css/bootflat.css" %}/>#}
-<link rel="stylesheet" href="{% static "css/custom-bootstrap.css" %}">
+
 <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
+<link rel="stylesheet" href="{% static "css/parsley.css" %}">
+<link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
+<link rel="stylesheet" href="{% static "css/owl.theme.css" %}">
+<link rel="stylesheet" href="{% static "css/custom-bootstrap.css" %}">
 
 {% endcompress %}
 
@@ -139,6 +143,8 @@
 
 
 <script src="{% static "js/jquery.sticky.js" %}"></script>
+<script src="{% static "js/parsley.min.js" %}"></script>
+<script src="{% static "js/owl.carousel.js" %}"></script>
 <script src="{% static "js/custom.js" %}"></script>
 {% include "includes/footer_scripts.html" %}
 

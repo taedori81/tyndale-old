@@ -240,6 +240,7 @@ INSTALLED_APPS = (
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
     "main",
+    "parsley",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",

@@ -8,4 +8,6 @@ $(function() {
             $('nav').removeClass('shrink');
         }
     });
+
+    $("main-carousel").owlCarousel();
 });
