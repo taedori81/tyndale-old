@@ -9,5 +9,6 @@ $(function() {
         }
     });
 
-    $("main-carousel").owlCarousel();
+
+    $( '#cbp-qtrotator' ).cbpQTRotator();
 });
