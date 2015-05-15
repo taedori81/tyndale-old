@@ -1,4 +1,11 @@
 from __future__ import absolute_import, unicode_literals
+import os
+
+
+# Comment out in development machine
+
+SECRET_KEY = os.environ['SECRET_KEY']
+NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
 
 ######################
 # MEZZANINE SETTINGS #
@@ -94,7 +101,7 @@ MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.tyndaleinternationaluniversity.org"]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -161,13 +168,14 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 #############
 # DATABASES #
 #############
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
         "ENGINE": "django.db.backends.",
         # DB name or path to database file if using sqlite3.
-        "NAME": "",
+        "NAME": os.path.join((BASE_DIR), "../database/db.sqlite3"),
         # Not used with sqlite3.
         "USER": "",
         # Not used with sqlite3.
@@ -205,7 +213,9 @@ STATIC_URL = "/static/"
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+# STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+
+STATIC_ROOT = os.path.join(BASE_DIR, '../static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -319,12 +329,12 @@ OPTIONAL_APPS = (
 # Check fabfile.py for defaults.
 
 # FABRIC = {
-#     "SSH_USER": "", # SSH username for host deploying to
+#     "SSH_USER": "tyndale-taedori", # SSH username for host deploying to
 #     "HOSTS": ALLOWED_HOSTS[:1], # List of hosts to deploy to (eg, first host)
 #     "DOMAINS": ALLOWED_HOSTS, # Domains for public site
-#     "REPO_URL": "ssh://hg@bitbucket.org/user/project", # Project's repo URL
-#     "VIRTUALENV_HOME":  "", # Absolute remote path for virtualenvs
-#     "PROJECT_NAME": "", # Unique identifier for project
+#     "REPO_URL": "https://github.com/taedori81/tyndale.git", # Project's repo URL
+#     "VIRTUALENV_HOME":  "home/taedori/.virtualenvs", # Absolute remote path for virtualenvs
+#     "PROJECT_NAME": "tyndale", # Unique identifier for project
 #     "REQUIREMENTS_PATH": "requirements.txt", # Project's pip requirements
 #     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
 #     "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
@@ -339,9 +349,12 @@ OPTIONAL_APPS = (
 # LOCAL SETTINGS #
 ##################
 
+# Uncomment in development machine
+
 # Allow any settings to be defined in local_settings.py which should be
 # ignored in your version control system allowing for settings to be
 # defined per machine.
+
 try:
     from local_settings import *
 except ImportError as e:
@@ -359,9 +372,23 @@ except ImportError as e:
 # without Mezzanine installed, as the case may be when using the
 # fabfile, where setting the dynamic settings below isn't strictly
 # required.
-try:
-    from mezzanine.utils.conf import set_dynamic_settings
-except ImportError:
-    pass
-else:
-    set_dynamic_settings(globals())
+
+# try:
+#     from mezzanine.utils.conf import set_dynamic_settings
+# except ImportError:
+#     pass
+# else:
+#     set_dynamic_settings(globals())
+
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'tyndaleuniversity@gmail.com'
+EMAIL_HOST_PASSWORD = '1543olympic'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
+PAGE_MENU_TEMPLATES = (
+      (1, "Top navigation bar", "pages/menus/dropdown.html"),
+)

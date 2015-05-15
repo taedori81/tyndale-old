@@ -69,7 +69,9 @@
                         </button>
                         <div class="row navbar-brand">
                                 <div class="col-sm-12">
-                                    <img class="img-responsive" src="{% static "images/Main_logo.png" %}" alt="TIU Logo"/>
+                                    <a href="{{ page.get_absolute_url }}">
+                                        <img class="img-responsive" src="{% static "images/main-logo.png" %}" alt="TIU Logo"/>
+                                    </a>
                                 </div>
 {#                                <div class="col-sm-9">#}
 {#                                    <p>Tyndale International University</p>#}
@@ -120,22 +122,27 @@
 </div>
 
 <footer id="main_footer">
+
     <div class="container">
 
         <div class="row">
-            <p class="site-info text-center">
-                {% trans "Powered by" %}
-                <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-                <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
-                {% trans "and" %}
-                <a href="http://www.djangoproject.com">Django</a>
-                <span class="separator">|</span>
-                {% trans "Theme by" %} <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
-                {% ifinstalled mezzanine.mobile %}
-                <span class="separator">|</span>
-                <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-                {% endifinstalled %}
-            </p>
+            <div class="col-sm-4 text-right">
+                <p>[ Tyndale International University ]</p>
+                <p><i class="fa fa-globe fa-fw"></i>&nbsp;&nbsp;<strong>Address</strong> : 1543 W Olympic Blvd, Los Angeles, CA 90015</p>
+                <p><i class="fa fa-envelope-o fa-fw"></i>&nbsp;&nbsp;<strong>Email</strong>  : tyndaleuniversity@gmail.com</p>
+                <p><i class="fa fa-phone fa-fw"></i>&nbsp;&nbsp;<strong>Phone</strong>  : (213)389-1773</p>
+                <p><i class="fa fa-fax fa-fw"></i>&nbsp;&nbsp;<strong>Fax</strong>  : (213)383-5044</p>
+            </div>
+            <div class="col-sm-4">
+                <p><i class="fa fa-copyright fa-fw"></i>2015 Tyndale International University All rights reserved</p>
+            </div>
+            <div class="col-sm-4 text-left">
+                <p><a href="http://www.yalamission.com">[ Yala Mission ]</a></p>
+                <p><i class="fa fa-globe fa-fw"></i>&nbsp;&nbsp;<strong>Address</strong> : 1543 W Olympic Blvd, Los Angeles, CA 90015</p>
+                <p><i class="fa fa-envelope-o fa-fw"></i>&nbsp;&nbsp;<strong>Email</strong>  : admin@yalamission.com</p>
+                <p><i class="fa fa-phone fa-fw"></i>&nbsp;&nbsp;<strong>Phone</strong>  : (213)389-1773</p>
+                <p><i class="fa fa-fax fa-fw"></i>&nbsp;&nbsp;<strong>Fax</strong>  : (213)383-5044</p>
+            </div>
         </div>
     </div>
 </footer>
