@@ -1,0 +1,63 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags staticfiles %}
+
+{% block main %}{{ block.super }}
+
+<section id="academics-section">
+    <table class="table table-hover">
+    	<thead>
+    		<tr>
+    			<th>Biblical Theology / Biblical Languages</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>
+                    <img src="{% static "images/faculty.jpg" %}" class="img-responsive" alt=""/>
+                </td>
+                <td>
+                    <p><strong>See-Nam Kim</strong></p>
+                    <p>-Old Testament-</p>
+                    <p>Ph.D., University of California in Los Angeles, Los Angeles: CA.</p>
+                    <p>M.A., Fuller Theological Seminary, Pasadena: CA.</p>
+                    <p>M.A., University of California in Los Angeles, Los Angeles: CA.</p>
+                    <p>M.Div., Chongshin Theological Seminary, Seoul: Korea.</p>
+                    <p>B.A., Chongshin College, Seoul: Korea.</p>
+                </td>
+    		</tr>
+
+            <tr>
+    			<td>
+                    <img src="{% static "images/faculty.jpg" %}" class="img-responsive" alt=""/>
+                </td>
+                <td>
+                    <p><strong>Joel E. Kim</strong></p>
+                    <p>-New Testament-</p>
+                    <p>Ph.D., Calvin Theological Seminary, Grand Rapids: MI.</p>
+                    <p>M.Div., Westminster Seminary, Escondido: CA.</p>
+                    <p>B.A., University of California in Los Angeles, Los Angeles: CA.</p>
+                </td>
+    		</tr>
+
+             <tr>
+    			<td>
+                    <img src="{% static "images/faculty.jpg" %}" class="img-responsive" alt=""/>
+                </td>
+                <td>
+                    <p><strong>Seung-Won Suh</strong></p>
+                    <p>-Biblical Languages (Hebrew, Greek)-</p>
+                    <p>D.Min. candi., Calremont Graduate School, Pomona: CA.</p>
+                    <p>Ph.D., Athens National University, Athens: Greece.</p>
+                    <p>M.Phil., Athens National University, Athens: Greece.</p>
+                    <p>M.Div., International Theological Seminary, El Monte: CA.</p>
+                    <p>Chongshin Theological Seminary, Seoul: Korea.</p>
+                    <p>M.A., Seoul National University, Seoul: Korea.</p>
+                    <p>B.A., Seoul National University, Seoul: Korea.</p>
+                </td>
+    		</tr>
+    	</tbody>
+    </table>
+</section>
+
+{% endblock %}

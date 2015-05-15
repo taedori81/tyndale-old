@@ -1,29 +1,26 @@
 {% extends "pages/page.html" %}
 
-{% load mezzanine_tags %}
+{% load mezzanine_tags staticfiles %}
 
 {% block main %}{{ block.super }}
 
     <section id="academics-section">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="jumbotron">
-                    <h1>Academics!</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Aliquam, aut consequatur, cumque dicta dolore ducimus fugit ipsam iusto libero
-                        maiores modi molestiae molestias nihil nobis officia optio quibusdam recusandae repudiandae.</p>
-                </div>
-            </div>
+             <div class="row">
+                 <div class="col-sm-12">
+                     <img src="{% static "images/academics.jpg" %}" alt="Academics" class="img-responsive img-rounded"/>
+                 </div>
+             </div>
         </div>
 
         <div class="row">
-            <div class="academics-contents">
-                <h2>Contents goes here...</h2>
-                {% editable page.richtextpage.content %}
-                {{ page.richtextpage.content|richtext_filters|safe }}
-                {% endeditable %}
-            </div>
-
+             <div id="about-content">
+                 <div class="col-sm-12">
+                    {% editable page.richtextpage.content %}
+                    {{ page.richtextpage.content|richtext_filters|safe }}
+                    {% endeditable %}
+                 </div>
+             </div>
         </div>
     </section>
 
