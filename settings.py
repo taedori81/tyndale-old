@@ -3,9 +3,9 @@ import os
 
 
 # Comment out in development machine
-
-SECRET_KEY = os.environ['SECRET_KEY']
-NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
+#
+# SECRET_KEY = os.environ['SECRET_KEY']
+# NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
 
 ######################
 # MEZZANINE SETTINGS #
@@ -173,9 +173,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
+        "ENGINE": "django.db.backends.sqlite3",
         # DB name or path to database file if using sqlite3.
-        "NAME": os.path.join((BASE_DIR), "../database/db.sqlite3"),
+        "NAME": "dev.db",
         # Not used with sqlite3.
         "USER": "",
         # Not used with sqlite3.
@@ -354,7 +354,7 @@ OPTIONAL_APPS = (
 # Allow any settings to be defined in local_settings.py which should be
 # ignored in your version control system allowing for settings to be
 # defined per machine.
-
+#
 try:
     from local_settings import *
 except ImportError as e:
@@ -373,12 +373,12 @@ except ImportError as e:
 # fabfile, where setting the dynamic settings below isn't strictly
 # required.
 
-# try:
-#     from mezzanine.utils.conf import set_dynamic_settings
-# except ImportError:
-#     pass
-# else:
-#     set_dynamic_settings(globals())
+try:
+    from mezzanine.utils.conf import set_dynamic_settings
+except ImportError:
+    pass
+else:
+    set_dynamic_settings(globals())
 
 
 
