@@ -3,9 +3,9 @@ import os
 
 
 # Comment out in development machine
-#
-# SECRET_KEY = os.environ['SECRET_KEY']
-# NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
+
+SECRET_KEY = os.environ['SECRET_KEY']
+NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
 
 ######################
 # MEZZANINE SETTINGS #
@@ -355,11 +355,13 @@ OPTIONAL_APPS = (
 # ignored in your version control system allowing for settings to be
 # defined per machine.
 #
-try:
-    from local_settings import *
-except ImportError as e:
-    if "local_settings" not in str(e):
-        raise e
+
+#
+# try:
+#     from local_settings import *
+# except ImportError as e:
+#     if "local_settings" not in str(e):
+#         raise e
 
 
 ####################
