@@ -4,8 +4,8 @@ import os
 
 # Comment out in development machine
 
-SECRET_KEY = os.environ['SECRET_KEY']
-NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
+# SECRET_KEY = os.environ['SECRET_KEY']
+# NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
 
 ######################
 # MEZZANINE SETTINGS #
@@ -101,7 +101,8 @@ MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["www.tyndaleinternationaluniversity.org"]
+ALLOWED_HOSTS = ["www.taedori-staging.com",
+                 "taedori-staging.com"]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -356,12 +357,12 @@ OPTIONAL_APPS = (
 # defined per machine.
 #
 
-#
-# try:
-#     from local_settings import *
-# except ImportError as e:
-#     if "local_settings" not in str(e):
-#         raise e
+
+try:
+    from local_settings import *
+except ImportError as e:
+    if "local_settings" not in str(e):
+        raise e
 
 
 ####################
