@@ -1,0 +1,32 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags staticfiles %}
+
+{% block main %}{{ block.super }}
+
+    <section id="about-section">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Message From the President of the University</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                          <img src="{% static "images/Frank.png" %}" alt="Frank Smith" class="img-responsive img-rounded"/>
+                          <p class="name">Frank J. Smith, Ph.D., D.D.</p>
+                          <p class="title">President</p>
+                         </div>
+                        <div class="col-sm-9">
+                            {% editable page.richtextpage.content %}
+                            {{ page.richtextpage.content|richtext_filters|safe }}
+                            {% endeditable %}
+                      </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

@@ -169,18 +169,18 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 #############
 # DATABASES #
 #############
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
 
 DATABASES = {
     "default": {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         # DB name or path to database file if using sqlite3.
-        "NAME": "dev.db",
+        "NAME": "%(proj_name)s",
         # Not used with sqlite3.
-        "USER": "",
+        "USER": "taedori",
         # Not used with sqlite3.
-        "PASSWORD": "",
+        "PASSWORD": "4814",
         # Set to empty string for localhost. Not used with sqlite3.
         "HOST": "",
         # Set to empty string for default. Not used with sqlite3.
@@ -216,7 +216,7 @@ STATIC_URL = "/static/"
 # Example: "/home/media/media.lawrence.com/static/"
 # STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
-STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.

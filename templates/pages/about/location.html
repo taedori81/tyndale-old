@@ -1,0 +1,33 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags staticfiles %}
+
+{% block main %}{{ block.super }}
+<section id="about-section">
+    <div class="row">
+        <div class="col-sm-12">
+            <img src="{% static "images/ladt.jpg" %}" alt="Los Angeles Downtown" class="img-responsive"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>TIU is located in Los Angeles Downtown</h3>
+            <h4>Our address is as follows: 1543 W Olympic Blvd, Los Angeles, CA 90015 </h4>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <iframe
+              width="600"
+              height="450"
+              frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAxYyeZnIre_8DW6jwGyZ229YwForvx-Uo
+                &q=1543%20W.%20Olympic%20Blvd.%20%20Los%20Angeles%2C%20CA%2090015">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

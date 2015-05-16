@@ -1,0 +1,168 @@
+{% extends "pages/richtextpage.html" %}
+{% load staticfiles %}
+{% block main_container %}container-fluid {% endblock %}
+{% block subtitle_section %}<div></div> {% endblock %}
+{% block main-left-col %}{% endblock %}
+{% block left_panel %}{% endblock %}
+{% block top_padding %}main-body{% endblock %}
+{% block main-middle-col %}col-sm-12{% endblock %}
+{% block main %}
+
+{#    <div id="main-carousel" class="owl-carousel">#}
+{##}
+{#        <img src="{% static "images/bible.jpg" %}" class="img-responsive" alt=""/>#}
+{#        <img src="{% static "images/admission.jpg" %}" class="img-responsive" alt=""/>#}
+{#        <img src="{% static "images/students.jpg" %}" class="img-responsive" alt=""/>#}
+{##}
+{#    </div>#}
+
+    <div id="main-slide" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicator -->
+        <ol class="carousel-indicators">
+            <li data-target="#main-slide" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slide" data-slide-to="1"></li>
+            <li data-target="#main-slide" data-slide-to="2"></li>
+        </ol>
+        <!-- Indicator End-->
+
+        <!-- Carousel inner -->
+        <div class="carousel-inner">
+
+            <div class="item active">
+                <img src="{% static "images/slider_bg1.jpg" %}" alt="slider" class="img-responsive"/>
+
+                <div class="slider-content">
+                    <div class="col-md-12 text-center">
+                        <h2><span>Welcome to <strong>Tyndale</strong></span></h2>
+
+                        <h3><span>The Reformed Theology based seminary</span></h3>
+                        <a href="#" class="slider btn btn-system btn-large">Check Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{% static "images/bible.png" %}" alt="slider" class="img-responsive"/>
+
+                <div class="slider-content">
+                    <div class="col-md-12 text-center">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="{% static "images/admission.png" %}" alt="slider" class="img-responsive"/>
+
+                <div class="slider-content">
+                    <div class="col-md-12 text-center">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel item end -->
+        </div>
+        <!-- Carousel inner end -->
+        <!-- Controls -->
+         <a class="left carousel-control" href="#main-slide" data-slide="prev">
+             <span><i class="fa fa-angle-left"></i></span>
+         </a>
+         <a class="right carousel-control" href="#main-slide" data-slide="next">
+             <span><i class="fa fa-angle-right"></i></span>
+         </a>
+    </div>
+
+    <section id="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="page-header text-center">
+                    <h1>Our Mission</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="page-header text-center">
+                    <h1>Preparing students to serve Christ and His church through biblical, experiential, and practical ministry</h1>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <div class="thumbnail">
+                        <img class="" src="{% static "images/frank-sq.png" %}" alt="President">
+                        <h4>President's Welcome</h4>
+                        <hr>
+                        <p>As President of Tyndale International University, I greet you in the name of the Lord Jesus Christ.  He is King of kings and Lord of lords...</p>
+                        <a href="{{ page.get_absolute_url }}about/president/" class="btn btn-primary" role="button">More</a>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                     <div class="thumbnail">
+                        <img class="" src="{% static "images/Daniel-sq.png" %}" alt="Chairman">
+                        <h4>Chairman's Welcome</h4>
+                         <hr>
+                         <p>Tyndale International University was established based upon Reformed Calvinism and faith based on conservative teaching... </p>
+                        <a href="{{ page.get_absolute_url }}about/chairman/" class="btn btn-primary" role="button">More</a>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="thumbnail">
+                        <img class="" src="{% static "images/tyndale-main.png" %}" alt="Tyndale">
+                        <h4>Learn about Tyndale</h4>
+                        <hr>
+                        <p>William Tyndale was an English scholar who became a leading figure in Protestant reform in the years leading up to his execution...</p>
+                        <a href="{{ page.get_absolute_url }}about/" class="btn btn-primary" role="button">More</a>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="thumbnail">
+                        <img class="" src="{% static "images/yala_logo.JPG" %}" alt="Yala">
+                        <h4>Learn about Yala Mission</h4>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto Alias architecto blanditiis consequatur dolores exercitationem...</p>
+                        <a href="http://www.yalamission.com" class="btn btn-primary" role="button">More</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="page-header text-center">
+                    <h1>Recommendations</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="cbp-qtrotator" class="cbp-qtrotator">
+						<div class="cbp-qtcontent">
+							<blockquote>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab, accusantium deserunt facere in odio tenetur. Accusantium autem eaque eos facere natus, officia quos saepe sunt, tempora unde voluptas voluptatem.</p>
+                                <footer>Someone Says...</footer>
+							</blockquote>
+						</div>
+						<div class="cbp-qtcontent">
+
+							<blockquote>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab, accusantium deserunt facere in odio tenetur. Accusantium autem eaque eos facere natus, officia quos saepe sunt, tempora unde voluptas voluptatem.</p>
+                                <footer>Someone Says...</footer>
+							</blockquote>
+						</div>
+						<div class="cbp-qtcontent">
+							<blockquote>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab, accusantium deserunt facere in odio tenetur. Accusantium autem eaque eos facere natus, officia quos saepe sunt, tempora unde voluptas voluptatem.</p>
+                                <footer>Someone Says...</footer>
+							</blockquote>
+						</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+
+{#// TODO: Work on Carousel in main index page. //#}

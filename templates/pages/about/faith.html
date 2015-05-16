@@ -1,0 +1,26 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags staticfiles %}
+
+{% block main %}{{ block.super }}
+
+
+<section id="about-section">
+        <div class="row">
+             <div class="col-sm-12">
+                 <img src="{% static "images/faith-banner.png" %}" alt="State of Faith" class="img-responsive img-rounded"/>
+             </div>
+        </div>
+
+        <div class="row">
+            <div id="about-content">
+                <div class="col-sm-12">
+                    {% editable page.richtextpage.content %}
+                    {{ page.richtextpage.content|richtext_filters|safe }}
+                    {% endeditable %}
+                </div>
+            </div>
+        </div>
+</section>
+
+{% endblock %}
