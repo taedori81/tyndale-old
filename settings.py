@@ -4,8 +4,9 @@ import os
 
 # Comment out in development machine
 
-# SECRET_KEY = os.environ['SECRET_KEY']
-# NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
+SECRET_KEY = os.environ['SECRET_KEY']
+NEVERCACHE_KEY = os.environ['NEVERCACHE_KEY']
+
 
 ######################
 # MEZZANINE SETTINGS #
