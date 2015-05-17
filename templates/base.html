@@ -29,8 +29,7 @@
 
 <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
 <link rel="stylesheet" href="{% static "css/parsley.css" %}">
-<link rel="stylesheet" href="{% static "css/owl.carousel.css" %}">
-<link rel="stylesheet" href="{% static "css/owl.theme.css" %}">
+<link rel="stylesheet" href="{% static "css/animate.css" %}">
 <link rel="stylesheet" href="{% static "css/custom-bootstrap.css" %}">
 
 {% endcompress %}
@@ -108,7 +107,7 @@
         </div>
 
         <!-- Main Center Panel -->
-        <div class="{% block main-middle-col %}col-sm-12{% endblock %} middle">
+        <div class="{% block main-middle-col %}col-sm-12{% endblock %} middle wow fadeIn">
             {% block main %}{% endblock %}
         </div>
 
@@ -154,6 +153,8 @@
 <script src="{% static "js/parsley.min.js" %}"></script>
 <script src="{% static "js/modernizr.js" %}"></script>
 <script src="{% static "js/jquery.cbpQTRotator.js" %}"></script>
+<script src="{% static "js/wow.min.js" %}"></script>
+<script src="{% static "js/jquery.nicescroll.js" %}"></script>
 <script src="{% static "js/custom.js" %}"></script>
 {% include "includes/footer_scripts.html" %}
 
