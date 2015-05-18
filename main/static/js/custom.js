@@ -24,5 +24,7 @@ $(function() {
 		zindex: 999999999,
 		horizrailenabled: false,
 		cursorborderradius: 0,
+        touchbehavior:true,
+        cursordragontouch: true,
     });
 });
