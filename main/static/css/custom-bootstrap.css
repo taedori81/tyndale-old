@@ -72,8 +72,8 @@ body {
 /*-------------------------------------------*/
 #side-menu {
   margin-top: 30px;
-  font-size: 14px;
-  font-family: 'Slabo 27px', serif;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
 }
 #side-menu .nav > li > a {
   display: inline-block;
@@ -84,8 +84,6 @@ body {
   padding-left: 10px;
 }
 #side-menu li {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 14px;
   border-bottom: 1px dotted rgba(52, 109, 196, 0.42);
   padding-top: 10px;
 }
@@ -103,7 +101,7 @@ body {
   transition: font-size 0.2s ease, background-color 0.2s, ease;
 }
 #side-menu li a:hover {
-  font-size: 16px;
+  font-size: 14px;
   background: #f9f9f9;
 }
 @media (max-width: 768px) {
@@ -159,7 +157,7 @@ nav .navbar-collapse .navbar .shrink {
   }
 }
 .dropdown-menu > li > a {
-  font-size: 13px;
+  font-size: 11px;
 }
 .navbar-default {
   background-color: #f9f9f9;
